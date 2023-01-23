@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 문제
@@ -49,7 +49,7 @@ N 길이의 노래에 대해서 마지막으로 고르게 되는 손가락의 �
 
 import java.util.Scanner;
 
-public class coca_cola {
+public class B02_코카콜라 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

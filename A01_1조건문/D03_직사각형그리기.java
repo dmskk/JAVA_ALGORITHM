@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 문제
@@ -30,7 +30,7 @@ package conditional_statements;
 
 import java.util.Scanner;
 
-public class rectangle {
+public class D03_직사각형그리기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] x = new int[3];

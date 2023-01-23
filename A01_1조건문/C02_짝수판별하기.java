@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 문제
@@ -31,7 +31,7 @@ not even
 
 import java.util.Scanner;
 
-public class even {
+public class C02_짝수판별하기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();

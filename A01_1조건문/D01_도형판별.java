@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 문제
@@ -37,7 +37,7 @@ Equilateral
 
 import java.util.Scanner;
 
-public class figure_discrimination {
+public class D01_도형판별 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();

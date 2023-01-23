@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 3 개의 정수가 주어질 때, 이 중 최댓값을 찾는 프로그램을 작성하여라.
@@ -30,7 +30,7 @@ package conditional_statements;
 
 import java.util.Scanner;
 
-public class max_value {
+public class C01_최댓값찾기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

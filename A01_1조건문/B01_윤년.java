@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 문제
@@ -40,7 +40,7 @@ YES
 
 import java.util.Scanner;
 
-public class leap_year {
+public class B01_윤년 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

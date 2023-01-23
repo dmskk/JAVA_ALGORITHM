@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 
 /*
 문제
@@ -29,7 +29,7 @@ B
 
 import java.util.Scanner;
 
-public class yutnori {
+public class C03_윷놀이 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

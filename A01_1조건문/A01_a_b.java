@@ -1,4 +1,4 @@
-package conditional_statements;
+package A01_1조건문;
 /*
 문제
 두 수 A,B를 입력받고, A - B를 출력하는 프로그램을 작성해보자.
@@ -32,7 +32,7 @@ package conditional_statements;
 
 import java.util.Scanner;
 
-public class a_b {
+public class A01_a_b {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a, b;
