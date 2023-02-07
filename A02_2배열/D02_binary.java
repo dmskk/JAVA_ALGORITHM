@@ -19,33 +19,38 @@ package A02_2배열;
 1110
  */
 
-import java.util.Scanner;
-
 /*
 예제 입력
 31
 예제 출력
 11111
  */
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
 public class D02_binary {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int[] arr = new int[1010];
-        int idx = 0;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
+        long num = Long.parseLong(br.readLine());
+        ArrayList<Long> arr = new ArrayList<>();
 
-        for(int i=0; ; i++) {
-            arr[i] = num%2;
+        for(long i=0; 0<num; i++) {
+            long temp = num % 2;
             num /= 2;
-            if(num == 1) {
-                arr[i+1] = 1;
-                idx = i+1;
-                break;
-            }
+            arr.add(temp);
         }
 
-        for(int i=idx; i>=0; i--) {
-            System.out.print(arr[i]);
+        Collections.reverse(arr);
+
+        for(long temp:arr) {
+            sb.append(temp);
         }
+
+        bw.write(String.valueOf(sb));
+        bw.flush();
+        bw.close();
     }
 }
