@@ -34,37 +34,47 @@ N과 시작 숫자 S가 주어지면 숫자 피라미드를 만드는 프로그�
 987654321
  */
 
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class C02_숫자피라미드 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int line = sc.nextInt();
-        int start = sc.nextInt();
-        int[][] arr = new int[10010][10010];
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        StringBuilder sb = new StringBuilder();
 
-        for(int i=0; i<line; i++) {
-            if(i != 0 && i % 2 == 0) {
-                for(int j=2*i; j>=0; j--) {
-                    arr[i][j] = start++;
-                    if(start == 10) start = 1;
-                }
-            } else {
-                for(int j=0; j<2*i+1; j++) {
-                    arr[i][j] = start++;
-                    if(start == 10) start = 1;
+        int line = Integer.parseInt(st.nextToken());
+        int start = Integer.parseInt(st.nextToken());
+        int[][] arr = new int[110][110];
+        int back=0;
+
+        for(int i=1; i<=line; i++) {
+            for(int j=0; j<line-i; j++){
+                sb.append(" ");
+            }
+
+            if(i%2 != 0){
+                back = start;
+                for(int j=0; j<2*i-1; j++){
+                    back++;
+                    if(back>=10) back=1;
                 }
             }
+
+            for(int j=0; j<2*i-1; j++){
+                back--;
+                if(back == 0) back = 9;
+                if(i%2 != 0) sb.append(back);
+                else sb.append(start);
+                start++;
+                if(start >= 10) start = 1;
+            }
+            sb.append("\n");
         }
 
-        for(int i=0; i<line; i++) {
-            for(int j=0; j<line-1-i; j++) {
-                System.out.print(" ");
-            }
-            for(int j=0; j<2*i+1; j++) {
-                System.out.print(arr[i][j]);
-            }
-            System.out.print("\n");
-        }
+        bw.write(String.valueOf(sb));
+        bw.flush();
+        bw.close();
     }
 }
