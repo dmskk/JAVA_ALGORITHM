@@ -52,7 +52,7 @@ public class D03_제곱수탐색 {
             }
         }
 
-        if(mx == 0) {
+        if(sum == 0) {
             System.out.println("-1");
         } else {
             System.out.println(sum);

@@ -37,7 +37,7 @@ public class D02_제곱근구하기 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int i=1; i <= n/2; i++) {
+        for(int i=1; i <= n; i++) {
             if(i*i >= n) {
                 System.out.println(i);
                 break;
