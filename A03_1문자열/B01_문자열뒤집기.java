@@ -22,7 +22,7 @@ Hello World!
 
 import java.util.Scanner;
 
-public class A02_문자열뒤집기 {
+public class B01_문자열뒤집기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
