@@ -70,6 +70,7 @@ ph2j
  */
 
 import java.io.*;
+import java.math.BigInteger;
 import java.util.*;
 
 public class D05_알파벳사이숫자 {
@@ -77,7 +78,7 @@ public class D05_알파벳사이숫자 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringBuilder sb = new StringBuilder();
-        Map<Long, Long> map;
+        Map<BigInteger, Integer> map;
         String[] arr;
         int T = Integer.parseInt(br.readLine());
         int N;
@@ -88,11 +89,17 @@ public class D05_알파벳사이숫자 {
             for(int n=0; n<N; n++) {
                 arr = br.readLine().split("[a-z]");
                 for(String s : arr) {
-                    if(!s.isEmpty()) map.put(Long.parseLong(s), map.getOrDefault(Long.parseLong(s), 0L) + 1L);
+                    if(!s.isEmpty()) {
+                        BigInteger bi = new BigInteger(s);
+                        map.put(bi, map.getOrDefault(bi, 0) + 1);
+                    }
                 }
             }
-            for(Map.Entry<Long, Long> entry : map.entrySet()) {
-                for(long i=0; i< entry.getValue(); i++) sb.append(entry.getKey()).append(" ");
+            for(Map.Entry<BigInteger, Integer> e : map.entrySet()) {
+                for(int i=0; i<e.getValue(); i++) {
+                    sb.append(e.getKey());
+                    sb.append(" ");
+                }
             }
             sb.append("\n");
         }
