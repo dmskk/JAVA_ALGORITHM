@@ -64,10 +64,6 @@ public class D02_tetris {
 
         for(int i=0; i<r; i++) {
 
-            if(map[i].indexOf(0) == -1) {
-                break;
-            }
-
             for(int j=0; j<c; j++) {
                 if(map[i].get(j) == 0) {
                     if(!upCheck(i, j)) {
@@ -113,8 +109,6 @@ public class D02_tetris {
 
             if(colCheck(down, j)) {
                 cnt++;
-            } else {
-                break;
             }
         }
 
