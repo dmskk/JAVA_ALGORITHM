@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -46,7 +43,8 @@ public class Main {
         }
 
         int result = dfs(graph, isVisited, 1);
-        System.out.println(result);
-
+        bw.write(String.valueOf(result));
+        bw.flush();
+        bw.close();
     }
 }
